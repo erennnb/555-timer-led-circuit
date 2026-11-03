@@ -1,97 +1,119 @@
 # ⚡ NE555 Timer — Blinking LED Circuit
 
-\<p align="center">
-&#x20; \<strong>A simple circuit. A fundamental concept. A step into electronics.\</strong>
-\</p>
+<p align="center">
+  <strong>One IC. One LED. Endless possibilities to learn.</strong>
+</p>
 
-\<p align="center">
-&#x20; Designed with ❤️ and \<strong>KiCad\</strong>
-\</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/EDA-KiCad-blue?style=for-the-badge&logo=kicad" alt="KiCad"/>
+  <img src="https://img.shields.io/badge/IC-NE555-orange?style=for-the-badge" alt="NE555"/>
+  <img src="https://img.shields.io/badge/Project-Electronics-green?style=for-the-badge" alt="Electronics"/>
+</p>
 
 ---
 
-## 🔎 About The Project
+## 🔍 About The Project
 
-This project is a blinking LED circuit built around the **NE555 timer IC**, one of the most widely used integrated circuits in electronics.
+This project is a **blinking LED circuit based on the NE555 timer IC**, designed using KiCad.
 
-The goal is to explore the fundamentals of timing circuits, understand how electronic components work together, and take the first steps toward PCB design.
+The NE555 operates as an astable multivibrator, continuously generating pulses that turn the LED on and off at regular intervals.
 
-What starts as a single blinking LED becomes an opportunity to learn circuit design, component selection, schematic capture, and PCB layout.
+The purpose of this project is to gain practical experience in electronic circuit design, schematic development, PCB layout, and hardware design fundamentals.
 
-## 🎯 Project Goals
+## 📸 Project Gallery
 
-- Understand the fundamentals of the NE555 timer.
-- Explore timing circuits and oscillation.
-- Practice schematic design in KiCad.
-- Learn component placement and PCB routing.
-- Build a foundation for more advanced electronics projects.
+### Circuit Schematic
+
+![NE555 Circuit Schematic](images/schematic.png)
+
+### PCB Layout
+
+![PCB Layout](images/pcb-layout.png)
+
+### 3D PCB Visualization
+
+![3D PCB View](images/3d-view.png)
+
+---
 
 ## 🧩 Components
 
-| Component      | Purpose                                          |
-| -------------- | ------------------------------------------------ |
-| NE555 timer IC | Generates timing pulses                          |
-| Resistors      | Set timing characteristics and limit LED current |
-| Capacitor(s)   | Determine timing behavior                        |
-| LED            | Visual output indicator                          |
-| Power supply   | Provides circuit power                           |
+| Component | Function |
+|---|---|
+| NE555 Timer IC | Generates periodic pulses |
+| Resistors | Control timing and LED current |
+| Capacitor | Determines timing characteristics |
+| LED | Visual output indicator |
+| Power Supply | Provides operating voltage |
 
-*Component values and the exact configuration are documented in the KiCad project files.*
+## ⚙️ How It Works
 
-## 🛠️ Tools & Technologies
+The NE555 is configured in astable mode.
 
-\<p>
-&#x20; \<img src="[https://img.shields.io/badge/KiCad-PCB%20Design-314CB6?style=for-the-badge&logo=kicad&logoColor=white](https://img.shields.io/badge/KiCad-PCB%20Design-314CB6?style=for-the-badge\&logo=kicad\&logoColor=white)" alt="KiCad PCB Design"/>
-&#x20; \<img src="[https://img.shields.io/badge/Electronics-Circuit%20Design-orange?style=for-the-badge](https://img.shields.io/badge/Electronics-Circuit%20Design-orange?style=for-the-badge)" alt="Electronics Circuit Design"/>
-\</p>
+1. The capacitor charges through the resistor network.
+2. When the capacitor voltage reaches the upper threshold, the output changes state.
+3. The capacitor discharges through the discharge path.
+4. When the voltage reaches the lower threshold, the output changes again.
+5. This cycle repeats continuously, causing the LED to blink.
 
-- **EDA Software:** KiCad
-- **Main IC:** NE555
-- **Design:** Electronic schematic and PCB layout
+The blinking frequency depends on the resistor and capacitor values.
 
-## 📂 Project Structure
+## 🛠️ Design Tools
+
+- **KiCad** — Schematic capture and PCB design
+- **Gerber** — PCB manufacturing file format
+
+## 📂 Repository Structure
 
 ```text
 555-timer-led-circuit/
+│
 ├── README.md
-├── 555-timer-led-circuit.kicad_pro
-├── 555-timer-led-circuit.kicad_sch
-└── 555-timer-led-circuit.kicad_pcb
+├── images/
+│   ├── schematic.png
+│   ├── pcb-layout.png
+│   └── 3d-view.png
+│
+├── gerber/
+│
+├── 555_timer_devre.kicad_pro
+├── 555_timer_devre.kicad_sch
+└── 555_timer_devre.kicad_pcb
 ```
 
-*Filenames may differ depending on the actual project files.*
+## ✅ Project Progress
 
-## ✅ Project Status
-
-- [x] Schematic design
+- [x] Circuit schematic design
+- [x] Component selection
 - [x] PCB layout
-- [x] Design Rule Check (DRC)
+- [x] Gerber file preparation
+- [ ] Physical PCB production
 - [ ] Hardware testing
 
-## 🚀 What I Learned
+## 📚 What I Learned
 
-- Translating a circuit idea into a schematic.
-- Understanding the role of the NE555 timer.
-- Organizing electronic components in a PCB design.
-- Developing a structured electronics design workflow.
+- Understanding the NE555 timer IC.
+- Learning the astable multivibrator configuration.
+- Creating electronic schematics with KiCad.
+- Component placement and PCB routing.
+- Preparing PCB manufacturing files.
 
-## 🔮 Future Improvements
+## 🚀 Future Improvements
 
-- Calculate and measure the LED blinking frequency.
-- Compare theoretical timing with measured results.
-- Refine PCB component placement and routing.
-- Explore additional NE555 operating modes.
-
-## 👨‍💻 About Me
-
-I am an Electrical and Electronics Engineering student building practical skills in electronics, PCB design, and embedded systems.
-
-This project is part of my journey from learning circuit fundamentals to designing more advanced electronic systems.
-
-**One circuit at a time. One concept at a time.**
+- Measure the actual LED blinking frequency.
+- Compare theoretical and measured timing values.
+- Improve PCB layout and component placement.
+- Experiment with different resistor and capacitor values.
+- Build more advanced timer-based circuits.
 
 ---
 
-\<p align="center">
-&#x20; \<i>Learning by designing, improving by building.\</i>
-\</p>
+## 👨‍💻 About Me
+
+I am an Electrical and Electronics Engineering student interested in electronics, PCB design, embedded systems, and hardware development.
+
+This repository is part of my practical learning journey, where I document my projects, experiments, and progress in electronics engineering.
+
+<p align="center">
+  <strong>Learn. Design. Build. Repeat.</strong>
+</p>
